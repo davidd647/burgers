@@ -1,0 +1,72 @@
+@import 'setup';
+
+
+body{
+	background: red;
+	background-image: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-image: url('http://unsplash.it/300/300');
+	background-position: center center;
+}
+.wrapper{
+	width:30vw;
+	height:30vw;
+	margin: 0 auto;
+	border:10px solid yellow;
+	background-image: url('http://unsplash.it/100/100');
+	background-size: contain;
+	background-position: center center;
+	position:relative;
+}
+
+h1{
+	padding-top: 9vw;
+	color:red; //whaaaaaat
+}
+
+marquee{
+	padding: 0;
+	-webkit-animation-name: blinker;  
+	-webkit-animation-iteration-count: infinite;  
+	-webkit-animation-timing-function: cubic-bezier(.3, 0, 1, 1);
+	-webkit-animation-duration: 0.3s; 
+}
+
+@-webkit-keyframes blinker {  
+  from { opacity: 1.0; }
+  to { opacity: 0.0; }
+}
+
+.burger{
+	height: 10vw;
+	width: 10vw;
+	background:red;
+	position:absolute;
+	background-position:center center;
+	background-size: cover;
+	border: 10px solid yellow;
+
+	-webkit-animation-name: spin;  
+	-webkit-animation-iteration-count: infinite;  
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-duration: 2s; 
+}
+@-webkit-keyframes spin {
+	0% {
+		transform:rotate(0deg) scale(1);
+	}
+	50%{
+		transform:rotate(180deg) scale(2);
+	}
+	100% {
+		transform:rotate(360deg) scale(1);
+	}
+}
+
+.burger1{left: -5vw; top: -5vw;}
+.burger2{right: -5vw; top: -5vw;}
+.burger3{left: -5vw; bottom: -5vw;}
+.burger4{right: -5vw; bottom: -5vw;}
